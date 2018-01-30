@@ -1,0 +1,19 @@
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\bin\Debug\DS And A.exe.config
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\bin\Debug\DS And A.exe
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\bin\Debug\DS And A.pdb
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\obj\Debug\DS And A.csprojResolveAssemblyReference.cache
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\obj\Debug\DS_And_A.Form1.resources
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\obj\Debug\DS_And_A.Properties.Resources.resources
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\obj\Debug\DS And A.csproj.GenerateResource.Cache
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\obj\Debug\DS And A.exe
+P:\IT Department\Application Development\Development\Playing Around\Sebastian\DS & A\DS And A\DS And A\obj\Debug\DS And A.pdb
+D:\Projects\DS & A\DS And A\DS And A\bin\Debug\DS And A.exe.config
+D:\Projects\DS & A\DS And A\DS And A\bin\Debug\DS And A.exe
+D:\Projects\DS & A\DS And A\DS And A\bin\Debug\DS And A.pdb
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS And A.csprojResolveAssemblyReference.cache
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS_And_A.Form1.resources
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS_And_A.Properties.Resources.resources
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS And A.csproj.GenerateResource.Cache
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS And A.csproj.CoreCompileInputs.cache
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS And A.exe
+D:\Projects\DS & A\DS And A\DS And A\obj\Debug\DS And A.pdb

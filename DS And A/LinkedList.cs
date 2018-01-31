@@ -12,7 +12,7 @@ namespace DS_And_A
 
         public Node Head { get => _head; set => _head = value; }
 
-        public void InsertAtHead(int Data)
+        public virtual void InsertAtHead(int Data) //Marked virtual so that it can be overridden
         {
             Node NewNode = new Node(Data);
             NewNode.NextNode = this.Head; //On the first addition, this.head will be null, and this is how the last element's NextNode value ends up being null

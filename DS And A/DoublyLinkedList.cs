@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DS_And_A
 {
-    class DoublyLinkedList: LinkedList
+    class DoublyLinkedList : LinkedList
     {
         private TwoWayNode _head;
 
@@ -24,5 +24,54 @@ namespace DS_And_A
             }
             this.Head = NewNode;
         }
+        public void InsertNodeAtHead(TwoWayNode NewNode)
+        {
+            NewNode.NextNode = this.Head;
+            this.Head.PreviousNode = NewNode;
+        }
+        public void InsertionSortDList()
+
+        {
+
+            TwoWayNode current = this.Head.NextNode;
+            
+            TwoWayNode searchPointer = current.PreviousNode;
+
+            for (int i = 0; i < this.Length() - 1; i++)
+            {
+                try
+                {
+                    while (current.Data < searchPointer.Data)
+                    {
+                        searchPointer = searchPointer.PreviousNode;
+                    }
+                } catch (NullReferenceException e)
+                {
+                    this.InsertNodeAtHead(current);
+                    current = current.NextNode;
+                    
+
+                }
+                
+                //Before we move the node, we need to store our position
+                TwoWayNode nodeToMove = current;
+                //Move the current pointer to the next node to pick up on it on the next iteration
+                current = current.NextNode;
+                //this removes the current element from its unsorted place in the list by linking its previous and next elements together
+                nodeToMove.PreviousNode.NextNode = nodeToMove.NextNode;
+                nodeToMove.NextNode.PreviousNode = nodeToMove.PreviousNode;
+
+                //This places the element in its sorted position
+                nodeToMove.NextNode = searchPointer;
+                nodeToMove.PreviousNode = searchPointer.PreviousNode;
+                searchPointer.PreviousNode = nodeToMove;
+
+
+                
+
+
+            }
+        }
+
     }
 }

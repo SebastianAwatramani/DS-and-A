@@ -34,25 +34,18 @@ namespace DS_And_A
         {
 
             TwoWayNode current = this.Head.NextNode;
-            
+
             TwoWayNode searchPointer = current.PreviousNode;
 
             for (int i = 0; i < this.Length() - 1; i++)
             {
-                try
+                while (current.Data < searchPointer.Data && searchPointer.PreviousNode != null)
                 {
-                    while (current.Data < searchPointer.Data)
-                    {
-                        searchPointer = searchPointer.PreviousNode;
-                    }
-                } catch (NullReferenceException e)
-                {
-                    this.InsertNodeAtHead(current);
-                    current = current.NextNode;
-                    
-
+                    Console.WriteLine("current data: " + current.Data + " search data: " + searchPointer.Data + "search prev: " + searchPointer.PreviousNode.ToString());
+                    searchPointer = searchPointer.PreviousNode;
                 }
-                
+
+
                 //Before we move the node, we need to store our position
                 TwoWayNode nodeToMove = current;
                 //Move the current pointer to the next node to pick up on it on the next iteration
@@ -61,16 +54,46 @@ namespace DS_And_A
                 nodeToMove.PreviousNode.NextNode = nodeToMove.NextNode;
                 nodeToMove.NextNode.PreviousNode = nodeToMove.PreviousNode;
 
-                //This places the element in its sorted position
+                //First step is to link this node to the node at the searchpointer position
                 nodeToMove.NextNode = searchPointer;
-                nodeToMove.PreviousNode = searchPointer.PreviousNode;
                 searchPointer.PreviousNode = nodeToMove;
+                //This places the element in its sorted position
+                if (searchPointer.PreviousNode != null) //If we're not at the beginning of the list
+                {
+                    nodeToMove.PreviousNode = searchPointer.PreviousNode;
 
-
-                
-
+                }
+                else //if we are the beginning of the list
+                {
+                    this.Head = nodeToMove;
+                }
 
             }
+        }
+        public override string ToString()
+        {
+            String Result = "{";
+            TwoWayNode current = this.Head;
+
+            while (current != null)
+            {
+                Result += current.ToString() + ",";
+                current = current.NextNode;
+            }
+            Result += "}";
+            return Result;
+        }
+        public override int Length()
+        {
+            int length = 0;
+            TwoWayNode Current = this.Head;
+
+            while (Current != null)
+            {
+                length++;
+                Current = Current.NextNode;
+            }
+            return length;
         }
 
     }

@@ -69,7 +69,7 @@ namespace DS_And_A
             Result += "}";
             return Result;
         }
-        public int Length()
+        public virtual int Length()
         {
             int length = 0;
             Node Current = this.Head;

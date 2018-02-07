@@ -26,7 +26,7 @@ namespace DS_And_A
             //Sorter.InsertionSort(Balls);
             //Sorter.PrintArray(Balls);
 
-            LinkedList List = new LinkedList();
+            DoublyLinkedList List = new DoublyLinkedList();
             List.InsertAtHead(35);
             List.InsertAtHead(30);
             List.InsertAtHead(25);
@@ -35,7 +35,16 @@ namespace DS_And_A
             List.InsertAtHead(10);
             List.InsertAtHead(5);
 
-            List.InsertByValue(36);
+           // List.InsertByValue(36);
+
+            List.InsertAtHead(12);
+            List.InsertAtHead(3);
+            List.InsertAtHead(578);
+            List.InsertAtHead(75);
+            List.InsertAtHead(345);
+            List.InsertAtHead(1212);
+
+            List.InsertionSortDList();
 
             Console.WriteLine(List.ToString());
 

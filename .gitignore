@@ -1,0 +1,9 @@
+*.ide-wal
+*.ide-shm
+.vs/DS And A/v15/Server/sqlite3/storage.ide
+*.ide
+.vs/DS And A/v15/.suo
+*.exe
+DS And A/bin/Debug/DS And A.pdb
+*.cache
+DS And A/obj/Debug/DS And A.exe

@@ -43,7 +43,7 @@ namespace DS_And_A
             List.InsertAtHead(75);
             List.InsertAtHead(345);
             List.InsertAtHead(1212);
-
+            Console.WriteLine(List.ToString());
             List.InsertionSortDList();
 
             Console.WriteLine(List.ToString());

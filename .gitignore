@@ -7,3 +7,7 @@
 DS And A/bin/Debug/DS And A.pdb
 *.cache
 DS And A/obj/Debug/DS And A.exe
+*.exe
+DS And A/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.exe
+.vs/DS And A/v15/Server/sqlite3/storage.ide

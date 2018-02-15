@@ -27,22 +27,14 @@ namespace DS_And_A
             //Sorter.PrintArray(Balls);
 
             DoublyLinkedList List = new DoublyLinkedList();
-            List.InsertAtHead(35);
-            List.InsertAtHead(30);
-            List.InsertAtHead(25);
-            List.InsertAtHead(20);
-            List.InsertAtHead(15);
-            List.InsertAtHead(10);
+            List.InsertAtHead(1);
+            List.InsertAtHead(40);
+            List.InsertAtHead(3);
+            List.InsertAtHead(2);
             List.InsertAtHead(5);
 
            // List.InsertByValue(36);
 
-            List.InsertAtHead(12);
-            List.InsertAtHead(3);
-            List.InsertAtHead(578);
-            List.InsertAtHead(75);
-            List.InsertAtHead(345);
-            List.InsertAtHead(1212);
             Console.WriteLine(List.ToString());
             List.InsertionSortDList();
 

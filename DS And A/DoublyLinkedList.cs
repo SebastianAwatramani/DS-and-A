@@ -35,23 +35,14 @@ namespace DS_And_A
             TwoWayNode current = this.Head.NextNode;
             TwoWayNode searchPointer = current.PreviousNode;
 
-            for (int i = 0; i < this.Length(); i++)
+            for (int i = 0; i < this.Length() - 1; i++)
             {
-                while (current.Data < searchPointer.Data)
+                while (current.Data < searchPointer.Data && searchPointer.PreviousNode != null)
                 {
-                    if(searchPointer.PreviousNode != null)
-                    {
-                        searchPointer = searchPointer.PreviousNode;
-                    }
-                    else
-                    {
-                        break;
-                    }
+                    searchPointer = searchPointer.PreviousNode;
                     //Console.WriteLine("current data: " + current.Data + " search data: " + searchPointer.Data + "search prev: " + searchPointer.PreviousNode.ToString());
-                    
+
                 }
-
-
                 //Before we move the node, we need to store our position
                 TwoWayNode nodeToMove = current;
                 //Move the current pointer to the next node to pick up on it on the next iteration
@@ -59,26 +50,40 @@ namespace DS_And_A
 
                 //this removes the current element from its unsorted place in the list by linking its previous and next elements together
                 nodeToMove.PreviousNode.NextNode = nodeToMove.NextNode;
-                nodeToMove.NextNode.PreviousNode = nodeToMove.PreviousNode;
+
+                if (nodeToMove.NextNode != null)
+                {
+                    nodeToMove.NextNode.PreviousNode = nodeToMove.PreviousNode;
+                }
 
                 //Commenting to save place
                 //First step is to link this node to the node at the searchpointer position
-                nodeToMove.NextNode = searchPointer;
-                
+
+
                 //This places the element in its sorted position
-                if (searchPointer.PreviousNode != null) //If we're not at the beginning of the list
+                if (nodeToMove.Data > searchPointer.Data) //If we're not at the beginning of the list
                 {
-                    nodeToMove.PreviousNode = searchPointer.PreviousNode;
-                   
+                    nodeToMove.PreviousNode = searchPointer;
+                    nodeToMove.NextNode = searchPointer.NextNode;
+                    if (nodeToMove.NextNode != null)
+                    {
+                        nodeToMove.NextNode.PreviousNode = nodeToMove;
+                    }
+                    searchPointer.NextNode = nodeToMove;
 
                 }
                 else //if we are the beginning of the list
                 {
+                    nodeToMove.NextNode = searchPointer;
+                    searchPointer.PreviousNode = nodeToMove;
                     this.Head = nodeToMove;
                     this.Head.PreviousNode = null;
                 }
-                searchPointer.PreviousNode = nodeToMove;
-                searchPointer = current.PreviousNode;
+                //searchPointer.PreviousNode = nodeToMove;
+                if (current != null)
+                {
+                    searchPointer = current.PreviousNode;
+                }
             }
         }
         public override string ToString()

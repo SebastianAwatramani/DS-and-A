@@ -11,3 +11,6 @@ DS And A/obj/Debug/DS And A.exe
 DS And A/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 *.exe
 .vs/DS And A/v15/Server/sqlite3/storage.ide
+*.json
+*.sqlite
+*.cache
